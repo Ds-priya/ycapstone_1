@@ -8,6 +8,6 @@ Description:
    to do some data analysis.User interface designed using streamlit.
 
          The data can be used by the channels to collect the number of users, comments and thier  
-   views, that can hlep themimprove their program quality.
+   views, that can hlep them improve their program quality.
             
    
