@@ -7,7 +7,7 @@ Description:
    Then dictionaries in mongoDB are converted into dataframe as those are migrated to the structured database MYSQL
    to do some data analysis.User interface desined using streamlit.
 
-         The data can be used by the channels to collect the number of users, comments and thier views, that can hlep them 
-   improve their program quality.
+         The data can be used by the channels to collect the number of users, comments and thier  
+   views, that can hlep themimprove their program quality.
             
    
