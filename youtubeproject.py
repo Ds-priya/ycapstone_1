@@ -221,8 +221,6 @@ def ch_table():
     except:
         print("cnannels_info table already created") 
 
-
-
     # mongoDB database
         
     ch_list=[]   
@@ -292,12 +290,6 @@ def playlist_table():
         #convert pl_list into Dataframe
 
         df1=pd.DataFrame(pl_list)
-
-        myconnection = pymysql.connect(host='127.0.0.1',
-                                        user='root',
-                                        passwd='root',
-                                        database='youtube_data')
-        cur = myconnection.cursor() 
 
         #insert data frame values into mysql table channels_info
 
@@ -372,13 +364,7 @@ def video_table():
 
         #df3['v_duration']=df3['v_duration'].str.replace("PT", " ").replace("H", ":").replace("M", ":").replace("S", "")
 
-
-        myconnection = pymysql.connect(host='127.0.0.1',
-                                                user='root',
-                                                passwd='root',
-                                                database='youtube_data')
-        cur = myconnection.cursor() 
-
+        
         #insert data frame values into mysql table videos_info
 
 
@@ -471,12 +457,6 @@ def comment_table():
         df4=pd.DataFrame(com_list) 
 
         #df4['comment_published_date']=df4['comment_published_date'].replace("T"," ").replace("Z"," ")
-
-        myconnection = pymysql.connect(host='127.0.0.1',
-                                                        user='root',
-                                                        passwd='root',
-                                                        database='youtube_data')
-        cur = myconnection.cursor() 
 
         #insert data frame values into mysql table comments_info
         for index,row in df4.iterrows():
@@ -756,4 +736,3 @@ elif questions=="10.Which videos have the highest number of comments, and what a
     t10=cur.fetchall()  #it fetch all the datas from the above qury and store it ina variable t1
     df10=pd.DataFrame(t10,columns=['channel_name','video title','no of comment'])
     st.write(df10)    
-
